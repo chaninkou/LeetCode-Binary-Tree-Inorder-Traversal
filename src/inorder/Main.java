@@ -14,6 +14,9 @@ public class Main {
 		tree.addTreeNode(input);
 		
 		System.out.println("Inorder Solution: ");
+		
 		tree.inorderTraversal();
+		
+		//System.out.println(tree.inorderRecursive());
 	}
 }

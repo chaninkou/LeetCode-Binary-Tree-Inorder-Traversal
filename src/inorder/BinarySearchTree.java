@@ -14,7 +14,7 @@ public class BinarySearchTree {
 		System.out.println(result);
 	 }
 	
-	// Using iteratively way  
+	// Using iteratively way 
     public List<Integer> inorderTraversal(TreeNode root, List<Integer> result){
         
         Stack<TreeNode> stack = new Stack<TreeNode>();
@@ -43,28 +43,30 @@ public class BinarySearchTree {
     }
     
     // Recursive way, pretty fast.
-//     public List<Integer> inorderTraversal(TreeNode node){
-//         List<Integer> result = new ArrayList<>();
-        
-//         if(node != null){
-//             inorder(node, result);
-//         }
-        
-//         return result;
-//     }
+     public List<Integer> inorderRecursive(){
+         List<Integer> result = new ArrayList<>();
+         
+         if(root != null){
+             inorder(root, result);
+         }
+         
+         return result;
+     }
     
-//     private void inorder(TreeNode node, List result){
+	private void inorder(TreeNode node, List<Integer> result) {
+		// Check the left side first
+		if(node.left != null){
+			inorder(node.left, result);
+		}
 		
-// 		if (node.left != null) {
-// 			inorder(node.left, result);
-// 		}
-
-// 		result.add(node.val);
-
-// 		if (node.right != null) {
-// 			inorder(node.right, result);
-// 		}
-// 	}
+		// Add the current node, if there is not left child, add the current node
+		result.add(node.val);
+		
+		// Then check the right child node
+		if(node.right != null){
+			inorder(node.right, result);
+		}
+	}
 
 	public void addTreeNode(int[] values) {
 		TreeNode nodeToAdd;
