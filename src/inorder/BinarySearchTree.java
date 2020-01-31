@@ -14,7 +14,7 @@ public class BinarySearchTree {
 		System.out.println(result);
 	 }
 	
-	// Using iteratively way 
+	// Using iteratively way  
     public List<Integer> inorderTraversal(TreeNode root, List<Integer> result){
         
         Stack<TreeNode> stack = new Stack<TreeNode>();
