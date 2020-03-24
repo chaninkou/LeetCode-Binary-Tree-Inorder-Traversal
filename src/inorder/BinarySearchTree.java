@@ -9,6 +9,7 @@ public class BinarySearchTree {
 	
 	public void inorderTraversal(){
 		List<Integer> result = new ArrayList<Integer>();
+		
 		inorderTraversal(root, result);
 		
 		System.out.println(result);
